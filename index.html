@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+	<title>Template </title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		
+		.inputEffect,.editInput{
+			position: relative;
+			margin-top: 30px;	
+			text-transform: capitalize;			
+		}
+		.inputEffect input,.editInput input{
+			font-size: 1.5em;
+			padding: 10px 10px 10px 5px;
+			display: block;
+			width: 50%;
+			border: none;
+			border-bottom: 1px solid #757575;
+			outline: none;
+		}	
+		.inputEffect label {
+			color: #999;
+			font-size: 18px;
+			font-weight: normal;
+			position: absolute;
+			pointer-events: none;
+			left: 5px;
+			top: 10px;
+			transition: 0.2s ease all;
+			-moz-transition: 0.2s ease all;
+			-webkit-transition: 0.2s ease all;
+		}
+		.inputEffect input:focus~label{	
+			top: -20px;
+			font-size: 14px;
+			color: #00B0FF;
+		}
+		.editInput label {	
+			top: -20px;
+			font-size: 14px;
+			color: #00B0FF;	font-weight: normal;
+			position: absolute;
+			pointer-events: none;
+			left: 5px;			
+			transition: 0.2s ease all;
+			-moz-transition: 0.2s ease all;
+			-webkit-transition: 0.2s ease all;
+		}
+		
+		.inputEffect.error input{
+			border-bottom:solid 2px#FF5721 !important;
+		}
+		input[readonly]{
+			color:#00acc1 ;
+		}
+		input[type='submit']{
+			background:#26a69a;
+			width:300px;
+			padding:10px;
+			margin: 30px 0;
+			border: 0;
+			font-size: 1.25em;
+			text-transform: capitalize;
+		}
+		input[type='submit']:hover{
+			box-shadow:0 0 5px #26a69a;
+			background:#2bbbad;
+		}
+		.disNone{
+			//display:none;
+		}
+	.option-input input.radio {
+		border-radius: 50%;
+	}
+	.option-input input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+		position: relative;
+		top: 13.33333px;
+		width: 40px;
+		height: 40px;
+		-webkit-transition: all 0.15s ease-out 0;
+		-moz-transition: all 0.15s ease-out 0;
+		transition: all 0.15s ease-out 0;
+		background: #cbd1d8;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		outline: none;
+		position: relative;
+		margin-right: 0.5rem;
+
+	}
+	.option-input input:checked {
+		background: #03A9F4;
+	}
+	.option-input input:checked::before {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		content: '\2713';
+		display: inline-block;
+		font-size: 26.66667px;
+		text-align: center;
+		line-height: 40px;
+	}
+	.option-input input:checked::after {
+		-webkit-animation: click-wave 0.65s;
+		-moz-animation: click-wave 0.65s;
+		animation: click-wave 0.65s;
+		background: #40e0d0;
+		content: '';
+		display: block;
+		position: relative;
+		z-index: 9;
+	}
+	.qest{
+		padding: 10px 0;
+		font-size: 1.5em;
+	}
+	article{
+		margin:10px;
+	}
+	.profilePic{
+		text-align:center;
+	}
+	.profilePic img{
+		border-radius:50%;	
+ transition: all .51s;		
+	}
+	.profilePic img:hover{
+		border-radius:0%;		
+	}
+	</style>
+</head>
+<body>
+	<section class='container'>
+		<section class='wrap disNone' >
+			<h2>Template 1: Sign in </h2>
+			<form action='#'>
+				<div class='inputEffect error'>
+					<input type='text' />
+					<label>Username</label>
+				</div>
+				<div class='inputEffect'>
+					<input type='password' />
+					<label>Password</label>
+				</div>
+				<input type='submit' value='sign in'/>
+			</form>
+		</section>
+		<section class='wrap disNone' >
+			<h2>Template 2: Create Account </h2>
+			<form action='#'>
+				<div class='inputEffect error'>
+					<input type='text' />
+					<label>Username</label>
+				</div>
+				<div class='inputEffect'>
+					<input type='password' />
+					<label>Password</label>
+				</div>
+				<div class='inputEffect'>
+					<input type='password' />
+					<label>Re-enter password</label>
+				</div>
+				<div class='option-input'>
+					<label>
+						<input type='radio' value='male' name='gender' class=' radio'/>
+						Male	
+					</label>
+					<label>
+						<input type='radio' value='female' name='gender' class=' radio'/>
+						Female
+					</label>
+					
+				</div>
+				<div class='option-input'>
+					<label>
+						<input type='checkbox' value='JavaScript' name='skills'/>
+						JavaScript
+					</label>
+					<label>
+						<input type='checkbox' value='HTML' name='skills'/>
+						HTML
+					</label>
+					<label>
+						<input type='checkbox' value='JAVA' name='skills'/>
+						JAVA
+					</label>
+					<label>
+						<input type='checkbox' value='PHP' name='skills'/>
+						PHP
+					</label>
+					<label>
+						<input type='checkbox' value='AngularJS' name='skills'/>
+						AngularJS
+					</label>					
+					
+				</div>
+				<input type='submit' value='sign up'/>
+			</form>
+		</section>
+		
+		
+		<section class='wrap disNone' >
+			<h2>Template 3: </h2>
+			<article>
+				<p class='qest'>
+				Which SQL statement is used to extract data from a database?
+				</p>
+					
+				<div class='option-input'>
+					<label>
+						<input type='radio' value='ans1' name='opt1' class='radio'/>
+						 SELECT	
+					</label>
+					<label>
+						<input type='radio' value='ans2' name='opt1' class=' radio'/>
+						open
+					</label>
+					<label>
+						<input type='radio' value='ans3' name='opt1' class=' radio'/>
+						extract
+					</label>					
+					<label>
+						<input type='radio' value='ans4' name='opt1' class=' radio'/>
+						get
+					</label>
+					
+				</div>
+			</article>	
+			<article>
+				<p class='qest'>
+				What does SQL stand for
+				</p>
+					
+				<div class='option-input'>
+					<label>
+						<input type='radio' value='ans1' name='opt2' class='radio'/>
+						Strong Question Language	
+					</label>
+					<label>
+						<input type='radio' value='ans2' name='opt2' class=' radio'/>
+						Structured Question Language
+					</label>
+					<label>
+						<input type='radio' value='ans3' name='opt2' class=' radio'/>
+						Structured Query Language
+					</label>					
+					<label>
+						<input type='radio' value='ans4' name='opt2' class=' radio'/>
+						None of the above
+					</label>
+					
+				</div>
+			</article>		
+			</article>					
+		
+		</section>
+		<section class='wrap ' >
+			<h2>Template 4: Account Details </h2>
+			<form action='#'>
+				<div class='col-md-3 col-sm-3'>
+					<div class='profilePic'>
+						<img src='http://www.ness.com/wp-content/uploads/2015/03/ds-image-150x150.jpg' title='profile pic'/>
+					
+					</div>
+				</div>
+				<div class='col-md-9 col-sm-9'>
+					<div class='editInput '>
+						<input type='text' value='kate winslet'/>
+						<label>Username</label>						
+					</div>
+					<div class='editInput '>
+						<input type='text' value='kw@gmail.com'/>
+						<label>Email</label>		
+					</div>
+					<div class='editInput '>
+						<input type='text' value='ITC Infotech'/>
+						<label>Current Company</label>						
+					</div>
+					<div class='editInput '>
+						<input type='text' value='#719 race'/>
+						<label>Address line1</label>						
+					</div>
+					<div class='editInput '>
+						<input type='text' value='cincinnati'/>
+						<label>Address line2</label>						
+					</div>
+					<div class='editInput '>
+						<input type='text' value='Ohio'/>
+						<label>City</label>						
+					</div>
+					<div class='editInput '>
+						<input type='text' value='45202'/>
+						<label>Zipcode</label>						
+					</div>				
+					<div class='inputEffect '>
+						<input type='text' value=''/>
+						<label>Skills</label>						
+					</div>
+					<input type='submit' value='submit'/>
+				</div>	
+				
+			</form>
+		</section>
+		<section class='wrap ' >
+			<h2>Template 4: Reset Password </h2>
+			<form action='#'>
+				<div class='col-md-3 col-sm-3'>
+					<div class='profilePic'>
+						<img src='http://www.ness.com/wp-content/uploads/2015/03/ds-image-150x150.jpg' title='profile pic'/>
+					
+					</div>
+				</div>
+				<div class='col-md-9 col-sm-9'>
+				
+				<div class='editInput '>
+						<input type='text' value='kate winslet' readonly/>
+						<label>Username</label>						
+					</div>
+					<div class='editInput '>
+						<input type='password' />
+						<label>Old Password</label>		
+					</div>
+					<div class='editInput '>
+						<input type='password' />
+						<label>New Password</label>		
+					</div>
+					<div class='editInput '>
+						<input type='password' />
+						<label>Repeate new Password</label>		
+					</div>
+					<input type='submit' value='Reset'/>
+					
+				</div>	
+				
+			</form>
+		</section>
+	</section>
+</body>
+<script>
+$(document).ready(function(){ 
+	$('input').on('blur',function(){
+		$(this).parent('div').removeClass('inputEffect editInput  ');
+		  if($.trim($(this).val()) != ''){
+			  $(this).parent('div').addClass('editInput');
+		  }
+		  else{
+			 $(this).parent('div').addClass('inputEffect ');
+		  }
+	});
+});
+</script>
+</html>
